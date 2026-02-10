@@ -1,0 +1,52 @@
+// Inline css is tag level
+// Internal css is page level
+// External css is application level
+
+
+/* Inline css has the highest priority */
+/* order of priority : */
+/* Nearest tag has the highest priority */
+/* inline,internal(or)external,browser */ 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline css</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>  whichever comes last that is applied
+</head>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline css</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h1 {
+            color: red;
+        }
+    </style> whichever comes last that is applied
+</head>
+
+
+
+Specificity table lowest to highest priority
+| Selector Type      | Example              | Specificity Value |
+| ------------------ | -------------------- | ----------------- |
+| Universal Selector | `*`                  | 0                 |
+| Element Selector   | `div`, `p`           | 1                 |
+| Class Selector     | `.box`               | 10                |
+| Attribute Selector | `[type="text"]`      | 10                |
+| Pseudo-class       | `:hover`, `:focus`   | 10                |
+| ID Selector        | `#header`            | 100               |
+| Inline Style       | `style=""`           | 1000              |
+| `!important`       | Overrides everything |                   |
+
+
